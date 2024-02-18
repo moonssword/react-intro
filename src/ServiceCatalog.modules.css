@@ -1,0 +1,42 @@
+.sc-page {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10% 0 0 5%;
+}
+
+.navigation {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.sc-page-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.sc-page-cards__item {
+  width: 13%;
+  height: 70px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(40, 40, 40, 0.7);
+  background-color: rgb(0, 136, 255);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.sc-page-cards__item:hover {
+  background-color: rgba(0, 136, 255, 0.829);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
