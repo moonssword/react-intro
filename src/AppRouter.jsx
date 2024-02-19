@@ -1,7 +1,7 @@
 //AppRouter.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainPage from './MainPage';
+import MainPage from './mainPage';
 import ServiceCatalog from './ServiceCatalog';
 
 function AppRouter() {

@@ -2,14 +2,24 @@
   background-color: #f2f2f2;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
-  padding: 10% 0 0 5%;
+  padding: 10px;
+  margin-left: 30px; /* Отступ слева, равный ширине навигационного меню */
+  margin-top: 20px;
 }
 
 .navigation {
   font-size: 10px;
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.navigation-menu {
+  width: 200px;
+  margin-right: 20px;
+  font-size: 12px;
+  margin-top: 20px;
 }
 
 .sc-page-cards {
@@ -20,7 +30,7 @@
 }
 
 .sc-page-cards__item {
-  width: 13%;
+  width: 180px;
   height: 70px;
   border: 1px solid #ffffff;
   padding: 10px;
@@ -39,4 +49,8 @@
 .sc-page-cards__item:hover {
   background-color: rgba(0, 136, 255, 0.829);
   box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+.sc-content {
+  flex-grow: 1;
 }

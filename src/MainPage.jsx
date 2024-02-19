@@ -8,6 +8,7 @@ function MainPage() {
     <div>
       <div className='header'>
         <img src={logo} alt="logo" />
+        React App
       </div>
       <div className="main-page">
         <div id="cards" className="main-page-cards">
