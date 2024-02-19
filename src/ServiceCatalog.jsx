@@ -23,9 +23,9 @@ function ServiceCatalog() {
         </div>
         <div id="cards" className="sc-page-cards">
           {cards.map(card => (
-            <a key={card._id} className="sc-page-cards__item" href={card.link}>
+            <Link to={card.link} key={card._id} className="sc-page-cards__item">
               {card.title}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

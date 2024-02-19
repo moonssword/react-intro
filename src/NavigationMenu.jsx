@@ -14,14 +14,19 @@ function NavigationMenu() {
     }, []);
 
     return (
-        <div className="navigation-menu">
-          {cards.map(card => (
-            <div className="navigation-menu-element" key={card._id}>
-              <Link to={card.link}>
-                {card.title}
-              </Link>
+        <div>
+            <div className='navigation-menu-title'>Service Catalog</div>
+            <div className="navigation-menu">
+                {cards.map(card => (
+                    <div className="navigation-menu-item-container" key={card._id}>
+                        <div className="navigation-menu-element">
+                            <Link to={card.link}>
+                                {card.title}
+                            </Link>
+                        </div>
+                    </div>
+                ))}
             </div>
-          ))}
         </div>
     );
 }
