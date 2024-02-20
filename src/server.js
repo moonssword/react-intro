@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.get('/api/main-cards', async (req, res) => {
     try {
-      const mainCards = await MainPageCard.find().populate('children');
+      const mainCards = await MainPageCard.find().populate('categories');
       res.json(mainCards);
     } catch (err) {
       res.status(500).send(err);
@@ -24,17 +24,8 @@ app.get('/api/main-cards', async (req, res) => {
   
   app.get('/api/cards', async (req, res) => {
     try {
-      const cards = await Card.find().populate('children');
+      const cards = await Card.find().populate('categories');
       res.json(cards);
-    } catch (err) {
-      res.status(500).send(err);
-    }
-  });
-  
-  app.get('/api/sub-categories', async (req, res) => {
-    try {
-      const subCategories = await SubCategory.find();
-      res.json(subCategories);
     } catch (err) {
       res.status(500).send(err);
     }

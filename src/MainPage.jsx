@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom';
 import logo from './logo512.png'
 
 function MainPage() {
-  const [categories, setCategories] = useState([]);
+  const [cards, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/main-cards')
+    const url = `http://localhost:3001/api/main-cards`;
+    fetch(url)
       .then(response => response.json())
       .then(setCategories)
       .catch(console.error);
@@ -22,9 +23,9 @@ function MainPage() {
       </div>
       <div className="main-page">
         <div id="cards" className="main-page-cards">
-          {categories.map(category => (
-            <Link to={category.link} key={category._id} className="main-page-cards__item">
-              {category.title}
+          {cards.map(card => (
+            <Link to={card.link} key={card._id} className="main-page-cards__item">
+              {card.title}
             </Link>
           ))}
         </div>

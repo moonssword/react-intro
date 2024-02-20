@@ -1,18 +1,20 @@
 //ServiceCatalog.jsx
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './ServiceCatalog.modules.css';
 import NavigationMenu from './NavigationMenu';
 
 function ServiceCatalog() {
+  const { categoryId } = useParams();
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/cards')
+    const url = `http://localhost:3001/api/cards/`;
+    fetch(url)
       .then(response => response.json())
       .then(data => setCards(data))
       .catch(error => console.error("There was a problem with fetching cards:", error));
-  }, []);
+  }, [categoryId]);
 
   return (
     <div className="sc-page">
