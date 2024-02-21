@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import logo from './logo512.png'
 
 function MainPage() {
-  const [cards, setCategories] = useState([]);
+  const [cards, setMainCards] = useState([]);
 
   useEffect(() => {
     const url = `http://localhost:3001/api/main-cards`;
     fetch(url)
       .then(response => response.json())
-      .then(setCategories)
+      .then(setMainCards)
       .catch(console.error);
   }, []);
 

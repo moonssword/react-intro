@@ -31,6 +31,16 @@ app.get('/api/main-cards', async (req, res) => {
     }
   });
 
+  app.get('/api/cards/category/:categoryId', async (req, res) => {
+    try {
+      const { categoryId } = req.params;
+      const cards = await Card.find({ categories: categoryId }).populate('categories');
+      res.json(cards);
+    } catch (err) {
+      res.status(500).send(err);
+    }
+  });
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
